@@ -26,10 +26,22 @@ The agent didn't bring new problems into your design system. Every failure it su
 
 The same shape carries beyond design systems: an MCP server whose tool descriptions sit in one author's head, a skill whose instructions assume context that never made it into the file, a README an agent has to trust. Same three failures. Same fix.
 
+## Tell me what happened
+
+This kit comes from one team's design system: five moves that worked for one library, one codebase, one set of naming collisions. Whether they hold up in yours is an open question, and you are the one who can answer it.
+
+If you run the two-minute test or adopt any of the moves, message me on LinkedIn: [linkedin.com/in/fivepluszero](https://www.linkedin.com/in/fivepluszero). I collect two kinds of results:
+
+**What broke.** The invented props, the naming collision, the component your agent confidently misused. The strangest failures shape the next version of this kit and the talk. Anonymized, always.
+
+**What held up.** Which move you adopted, what changed in review, what the agent stopped getting wrong. Results from other teams are the evidence this workflow needs beyond one company.
+
+A sentence or two is plenty. If you can, include what kind of product and roughly how many components: the same move plays out differently in a 40-component library than a 400-component one.
+
 ## License
 
 [MIT](LICENSE) — use it, adapt it, bring it to your team.
 
 ---
 
-*Karen Ng · Principal Product Designer · [github.com/ng-karen](https://github.com/ng-karen)*
+*Karen Ng · Principal Product Designer · [github.com/ng-karen](https://github.com/ng-karen) · [LinkedIn](https://www.linkedin.com/in/fivepluszero)*
