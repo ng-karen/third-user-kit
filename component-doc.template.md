@@ -1,7 +1,7 @@
 # <ComponentName>
 
 <!-- Multi-author review is the point of this template. A component file written
-     by one person reflects one perspective. The feature designer has context to
+     by one person reflects one perspective. The product designer has context to
      add. The engineer has questions to ask. The agent has no way to get either
      unless it's in this file. -->
 
@@ -9,7 +9,7 @@
 status: experimental | extended | core        # criteria in tiers.md
 authors:
   - design-system-designer: <name>            # wrote the initial contract
-  - feature-designer: <name>                  # used it in a real flow before ship
+  - product-designer: <name>                  # used it in a real flow before ship
   - engineer: <name>                          # implemented it / reviewed the contract
 last-two-minute-test: <date> — pass | fail    # see two-minute-test.md
 ```
@@ -57,4 +57,4 @@ This component's name also appears in the codebase as: <list, or "no collisions 
 
 | Date | Reviewer | Role | What changed |
 |---|---|---|---|
-| ... | ... | feature designer / engineer | ... |
+| ... | ... | product designer / engineer | ... |

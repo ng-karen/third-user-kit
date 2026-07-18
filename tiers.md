@@ -13,7 +13,7 @@ Entry criteria (all required):
 - Used by **3+ feature areas** in production
 - Stable through the **last two minor versions**
 - **Passes the two-minute test** cleanly ([two-minute-test.md](two-minute-test.md))
-- Docs reviewed by a feature designer who used it in a real flow AND the engineer who implemented it
+- Docs reviewed by a product designer who used it in a real flow AND the engineer who implemented it
 
 What Core gets: version guarantees, first-class documentation, a migration path if it ever changes.
 

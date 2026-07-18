@@ -1,6 +1,6 @@
 # The Third User Kit
 
-A component library has always had two users: the feature designer who uses it and the engineer who ships it. It now has a third — the AI agent reading the same files to generate UI.
+A component library has always had two users: the product designer who uses it and the engineer who ships it. It now has a third — the AI agent reading the same files to generate UI.
 
 This kit is the workflow from the talk **"Built for Two: What Design Systems Are Missing When AI Agents Become the Third User"** — [AGNTCon + MCPCon Japan 2026](https://agntconmcpconjapan26.sched.com/event/2QlEP), September 11, Tokyo. Everything here is deliberately small: one test, one index, one set of tiers, one doc template.
 

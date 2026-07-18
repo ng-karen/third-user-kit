@@ -10,7 +10,7 @@ Let the agent derive what a component **is**: props, variants, tokens. It reads 
 
 ## Move 2 — Two readers, two jobs.
 
-A component file written by one person reflects one perspective. Before a doc is trusted, two more people read it, each with a different job: the **feature designer** reads it against a live flow ("would this doc have led me to the right component?"), the **engineer** reads it against the code ("does this contract match what's implemented?"). Review isn't overhead — it's the conversation between the two original users, finally written down where the third can read it.
+A component file written by one person reflects one perspective. Before a doc is trusted, two more people read it, each with a different job: the **product designer** reads it against a live flow ("would this doc have led me to the right component?"), the **engineer** reads it against the code ("does this contract match what's implemented?"). Review isn't overhead — it's the conversation between the two original users, finally written down where the third can read it.
 
 *Kit file: [component-doc.template.md](component-doc.template.md) — the authors block and review log make this visible.*
 
@@ -34,7 +34,7 @@ The feedback loop that keeps the other four honest. Give an agent one component'
 
 ## The moves in one week
 
-A component's path through the workflow, end to end: a feature team requests a component in a shared channel → the agent drafts the contract from source → feature designer and engineer review, each against their own surface → any name collision is renamed in the same PR → the component gets its one-line index row → the two-minute test runs against the finished doc → merge, and the channel hears about it. Feature work drives library work — the workflow rides existing rituals instead of adding new ones.
+A component's path through the workflow, end to end: a feature team requests a component in a shared channel → the agent drafts the contract from source → product designer and engineer review, each against their own surface → any name collision is renamed in the same PR → the component gets its one-line index row → the two-minute test runs against the finished doc → merge, and the channel hears about it. Feature work drives library work — the workflow rides existing rituals instead of adding new ones.
 
 ## Why this carries beyond design systems
 
