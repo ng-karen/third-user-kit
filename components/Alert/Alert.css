@@ -1,0 +1,182 @@
+/*
+ * Alert styles. Colour comes only from tokens, so themes and dark mode
+ * work without touching this file. `className` is for layout only.
+ * The Alert fills its container and sets no outer margin.
+ *
+ * Contrast targets: 4.5:1 for text, 3:1 for the icon, on each intent's own background.
+ */
+
+:root {
+  --tuk-radius: 6px;
+  --tuk-space-1: 4px;
+  --tuk-space-2: 8px;
+  --tuk-space-3: 12px;
+  --tuk-space-4: 16px;
+  --tuk-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  --tuk-focus: #0969da;
+
+  --tuk-info-fg: #0a3069;
+  --tuk-info-bg: #ddf4ff;
+  --tuk-info-border: #54aeff;
+  --tuk-info-icon: #0969da;
+
+  --tuk-success-fg: #033a16;
+  --tuk-success-bg: #dafbe1;
+  --tuk-success-border: #4ac26b;
+  --tuk-success-icon: #1a7f37;
+
+  --tuk-warning-fg: #3b2300;
+  --tuk-warning-bg: #fff8c5;
+  --tuk-warning-border: #d4a72c;
+  --tuk-warning-icon: #9a6700;
+
+  --tuk-danger-fg: #5f0d1f;
+  --tuk-danger-bg: #ffebe9;
+  --tuk-danger-border: #ff8182;
+  --tuk-danger-icon: #d1242f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tuk-focus: #4493f8;
+
+    --tuk-info-fg: #cae8ff;
+    --tuk-info-bg: #0c2d6b;
+    --tuk-info-border: #1f6feb;
+    --tuk-info-icon: #79c0ff;
+
+    --tuk-success-fg: #aff5b4;
+    --tuk-success-bg: #0f3d21;
+    --tuk-success-border: #238636;
+    --tuk-success-icon: #56d364;
+
+    --tuk-warning-fg: #f8e3a1;
+    --tuk-warning-bg: #3d2a00;
+    --tuk-warning-border: #9e6a03;
+    --tuk-warning-icon: #e3b341;
+
+    --tuk-danger-fg: #ffdcd7;
+    --tuk-danger-bg: #4c1018;
+    --tuk-danger-border: #da3633;
+    --tuk-danger-icon: #ff7b72;
+  }
+}
+
+.tuk-alert {
+  --_fg: var(--tuk-info-fg);
+  --_bg: var(--tuk-info-bg);
+  --_border: var(--tuk-info-border);
+  --_icon: var(--tuk-info-icon);
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--tuk-space-3);
+  width: 100%;
+  padding: var(--tuk-space-3) var(--tuk-space-4);
+  font-family: var(--tuk-font);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--_fg);
+  background: var(--_bg);
+  border: 1px solid var(--_border);
+  border-radius: var(--tuk-radius);
+}
+
+.tuk-alert--success { --_fg: var(--tuk-success-fg); --_bg: var(--tuk-success-bg); --_border: var(--tuk-success-border); --_icon: var(--tuk-success-icon); }
+.tuk-alert--warning { --_fg: var(--tuk-warning-fg); --_bg: var(--tuk-warning-bg); --_border: var(--tuk-warning-border); --_icon: var(--tuk-warning-icon); }
+.tuk-alert--danger  { --_fg: var(--tuk-danger-fg);  --_bg: var(--tuk-danger-bg);  --_border: var(--tuk-danger-border);  --_icon: var(--tuk-danger-icon); }
+
+.tuk-alert__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding-top: 2px;
+  color: var(--_icon);
+  fill: currentColor;
+}
+
+.tuk-alert__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tuk-alert__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.tuk-alert__body {
+  margin-top: var(--tuk-space-1);
+}
+
+.tuk-alert__body > :first-child { margin-top: 0; }
+.tuk-alert__body > :last-child { margin-bottom: 0; }
+
+.tuk-alert__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tuk-space-2);
+  flex-shrink: 0;
+}
+
+.tuk-alert__action,
+.tuk-alert__dismiss {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--tuk-radius);
+}
+
+.tuk-alert__action {
+  padding: var(--tuk-space-1) var(--tuk-space-3);
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid var(--_border);
+}
+
+.tuk-alert__action:hover { background: color-mix(in srgb, var(--_fg) 8%, transparent); }
+
+.tuk-alert__action--secondary { border-color: transparent; text-decoration: underline; }
+
+.tuk-alert__dismiss {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: var(--tuk-space-1);
+  margin: calc(var(--tuk-space-1) * -1);
+  background: transparent;
+  border: 0;
+  fill: currentColor;
+}
+
+.tuk-alert__dismiss:hover { background: color-mix(in srgb, var(--_fg) 8%, transparent); }
+
+.tuk-alert__action:focus-visible,
+.tuk-alert__dismiss:focus-visible {
+  outline: 2px solid var(--tuk-focus);
+  outline-offset: 2px;
+}
+
+/* Compact: one line, title plus one action. For toolbars and side panels. */
+.tuk-alert--compact {
+  align-items: center;
+  padding: var(--tuk-space-1) var(--tuk-space-3);
+}
+
+.tuk-alert--compact .tuk-alert__icon { padding-top: 0; }
+
+.tuk-alert--compact .tuk-alert__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* On narrow containers, actions drop below the text. */
+@container (max-width: 480px) {
+  .tuk-alert:not(.tuk-alert--compact) { flex-wrap: wrap; }
+  .tuk-alert:not(.tuk-alert--compact) .tuk-alert__actions { flex-basis: 100%; padding-left: 28px; }
+}
+
+@media (forced-colors: active) {
+  .tuk-alert { border-color: CanvasText; }
+  .tuk-alert__icon { color: CanvasText; }
+}
