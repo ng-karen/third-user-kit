@@ -4,6 +4,8 @@ A component library has always had two users: the product designer who uses it a
 
 This kit is the workflow from the talk **"Built for Two: What Design Systems Are Missing When AI Agents Become the Third User"** — [AGNTCon + MCPCon Japan 2026](https://agntconmcpconjapan26.sched.com/event/2QlEP), September 11, Tokyo. Everything here is deliberately small: one test, one map in two halves, one set of tiers, one doc template.
 
+**Live demo:** [ng-karen.github.io/third-user-kit](https://ng-karen.github.io/third-user-kit/)
+
 ## What's in the kit
 
 | File | What it is | Time to adopt |
@@ -17,6 +19,22 @@ This kit is the workflow from the talk **"Built for Two: What Design Systems Are
 | [component-doc.template.md](component-doc.template.md) | Component doc template with multi-author review built in | Per component |
 
 Example rows and names in these files use a fictional support-ticketing product.
+
+## Components
+
+| Component | What it is | Doc |
+|---|---|---|
+| [Alert](components/Alert/) | The Alert from the talk, built from the rewritten doc. Typed props, tests, and stories | [alert.after.md](docs/alert.after.md) |
+
+## Run it locally
+
+```bash
+npm install
+npm test
+npm run storybook
+```
+
+`npm run typecheck` checks the types. Storybook opens at http://localhost:6006.
 
 ## Where to start
 
