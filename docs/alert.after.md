@@ -3,10 +3,10 @@
 ```yaml
 status: core                                   # criteria in tiers.md
 authors:
-  - design-system-designer: <name>             # wrote the initial contract
-  - product-designer: <name>                   # used it in a real flow before ship
-  - engineer: <name>                           # implemented it / reviewed the contract
-last-two-minute-test: <date> · pass            # see two-minute-test.md
+  - design-system-designer: Karen Ng           # wrote the initial contract
+  - product-designer: Karen Ng                 # used it in a real flow before ship
+  - engineer: Karen Ng                         # implemented it / reviewed the contract
+last-two-minute-test: 2026-09-11 · pass        # see two-minute-test.md
 source: components/Alert/Alert.tsx
 types: components/Alert/Alert.types.ts
 ```
@@ -37,12 +37,12 @@ The word "alert" is used for more than one thing in this product. Keep them apar
 | Word in code | What it is | Is it this component? |
 |---|---|---|
 | `Alert` (this file) | UI message tied to a region of the page | Yes |
-| `AlertRule`, `alerts/` service | <fill in: e.g. SLA escalation rules that notify agents> | **No.** Never render an `AlertRule` with `<Alert>` just because the names match. |
+| `AlertRule`, `alerts/` service | Backend rules that watch ticket SLAs and notify agents before a breach. Data and logic, not UI. | **No.** Never render an `AlertRule` with `<Alert>` just because the names match. |
 | `role="alert"` | ARIA live region role | Only as an output of this component. Do not hand-write it. |
 
 The severity prop is **`intent`**. It is not `variant`, `type`, `status`, `severity`, or `kind`. The top value is **`danger`**, not `error` or `critical`.
 
-Verified: <date>
+Verified: 2026-09-11
 
 ## Decision guide: which intent?
 
@@ -188,6 +188,6 @@ The previous version ([alert.before.md](./alert.before.md)) looked finished. Run
 
 | Date | Reviewer | Role | What changed |
 |---|---|---|---|
-| <date> | <name> | design system designer | Rewrote from alert.before.md using component-doc.template.md |
-| <date> | <name> | product designer | |
-| <date> | <name> | engineer | |
+| 2026-09-11 | Karen Ng | design system designer | Rewrote from alert.before.md using component-doc.template.md |
+| 2026-09-11 | Karen Ng | product designer | |
+| 2026-09-11 | Karen Ng | engineer | |
